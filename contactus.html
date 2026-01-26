@@ -39,10 +39,10 @@
         <div class="form">
             <h1>We Are Ready Let's Talk</h1><br>
             <form action="">
-                <input type="text" name="Fname" value="" placeholder="Your Name"><br><br>
-                <input type="email" name="Email" value="" placeholder="Email Address"><br><br>
-                <textarea name="Message" placeholder="Message" style="height: 100px; resize: none; padding: 10px;"></textarea><br><br>
-                <button><a href="">Send Message</a></button>
+                <input type="text" name="Fname" value="" placeholder="Your Name" class="hello" required><br><br>
+                <input type="email" name="Email" value="" placeholder="Email Address" class="hello" required title="please enter a valid email~"><br><br>
+                <textarea name="Message" placeholder="Message" style="height: 100px; resize: none; padding: 10px;" class="hello" required></textarea><br><br>
+                <button onclick="Shahbaz()"><a href="">Send Message</a></button>
             </form>
         </div>
         <div class="info">
@@ -64,5 +64,11 @@
         <p>123 Fifth Avenue, MH 897, Mumbai, India | Phone:<a href="tel:7926840162">7926840162</a>| Email:<a href="outdoor@gmail.com">outdoor@gmail.com</a></p><br><br><br>
         <p>Copyright © 2026 Outdoor Adventure</p>
     </div>
+    <script>
+        function Shahbaz(){
+            var a= document.getElementsByClassName("hello").value;
+            alert("Your response has been Submitted!");
+        }
+    </script>
 </body>
 </html>
