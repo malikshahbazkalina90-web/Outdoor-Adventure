@@ -1,0 +1,148 @@
+*{
+    font-size: 20px;
+    margin: 0;
+    box-sizing: 0;
+    padding: 0;   
+    font-family: 'Noto Sans', sans-serif; 
+}
+body{
+    background-color:#ececec;
+
+}
+.navbar .logo{
+    padding-left: 50px;
+    font-size: 20px;
+}
+.navbar .os ul a{
+    text-decoration: none;
+    color: rgb(247, 252, 252);
+    font-weight: 700;
+}
+.navbar .os ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 10px;
+}
+.navbar .os ul button{
+    background-color: #fb2056;
+    padding: 3px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    padding: 5px;
+    width: 150px;
+    height: 50px;
+    margin-top: -30px;
+}
+.background2{
+    background-image:url("abouimg/about-bg-5.jpg");
+    background-position: center;
+    height: 576px;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    /* z-index: 0; */
+}
+.overlay{
+     position: absolute; 
+  
+  width: 100%; 
+  height:  576px; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); 
+  z-index: 1;
+  inset: 0;
+}
+.navbar,.hero{
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+ul{
+    list-style: none;
+}
+.background2 .hero{
+    text-align: center;
+    padding: 120px;
+}
+.hr{
+    text-align: left;
+    margin-left: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid red;
+    width: 50px;
+}
+.about2{
+    padding-top: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+}
+.content{
+    width: 50%;
+    padding-left: 40px;
+}
+.content h2{
+    font-size: 76px;
+}
+.image img{
+    width: 70%;
+    box-shadow: 10px 10px 0px 0px rgb(212, 206, 206);
+    border-radius: 10px;
+}
+.div31, .div32{
+    width: 40%;
+    h2{
+        font-size: 30px;
+    }
+}
+.div3{
+    display: flex;
+    padding: 40px;
+    padding-top: 80px;
+    /* justify-content: space-evenly; */
+    gap: 200px;
+    padding-bottom: 100px;
+}
+.line{
+    display: inline-block;
+    width: 12px;
+    height: 3px;
+    background: red;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.blackbox, .blackbox a{
+    background-color: black;
+    padding-top: 8%;
+    text-align: center;
+    /* font-size: 16px; */
+    height: 20%;
+    color: white;
+    text-decoration: none;
+}
+.blackbox{
+    background-color: black;
+    padding: 8%;
+    text-align: center;
+    /* font-size: 16px; */
+    height: 20%;
+}
+.video{
+    display: flex;
+    justify-content: center;
+}
+
+
+
