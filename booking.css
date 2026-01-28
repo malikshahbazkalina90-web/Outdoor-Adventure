@@ -228,6 +228,7 @@ h3{
 .booking {
   display: none;
   margin-top: 40px;
+  margin: 40px auto;
   background: #fff;
   border-radius: 20px;
   padding: 50px;
