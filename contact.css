@@ -87,7 +87,7 @@ ul{
 .contact .form form textarea {
     width: 130%;
 }
-.contact .form button{
+/* .contact .form button{
     background-color: #fb2056;
     padding: 10px;
     border-radius: 50px;
@@ -97,7 +97,7 @@ ul{
     margin-top: 18px;
     height: 50px;
     font-weight: 700;
-}
+} */
 .contact .form button a{
      text-decoration: none;
     color: white;
@@ -133,3 +133,121 @@ i{
     /* font-size: 16px; */
     height: 20%;
 }
+ .hello {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+}
+/* RED border when typing invalid email */
+ .hello:focus:invalid { 
+  border-color: red; 
+ }
+
+/* GREEN border when email is valid */
+ .hello:focus:valid { 
+  border-color: green; 
+ } 
+
+/* Error message h */
+.error-msg {
+  display: none;
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* Show error message only when email is invalid  */ */
+.hello:focus:invalid + .error-msg {
+  display: block; 
+ }
+/* /* CENTER FORM  */
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 60px auto;
+}
+
+/* FORM BOX
+.form {
+  background: #fff;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+} */ 
+
+/* INPUTS */
+.hello {
+  width: 100%;
+  padding: 14px;
+  margin-top: 12px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+/* TEXTAREA */
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+/* ERROR BORDER */
+.hello.error {
+  border-color: red;
+}
+
+/* ERROR MESSAGE */
+.error-msg {
+  display: none;
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* SHOW ERROR */
+.error-msg.show {
+  display: block;
+}
+
+/* BUTTON */
+.contact .form button {
+  margin-top: 20px;
+  /* padding: 14px 30px; */
+  /* border: none; */
+  background-color: #fb2056;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  width: 100%;
+  /* background-color: #fb2056; */
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    padding: 10px;
+    width: 160px;
+    margin-top: 18px;
+    height: 50px;
+    font-weight: 700;
+}
+.hello.error {
+  border-color: red;
+}
+
+.error-msg.show {
+  display: block;
+}
+.success-box {
+  display: none;  /* HIDDEN BY DEFAULT */
+  text-align: center;
+  padding: 40px;
+}
+
+.success-box h2 {
+  color: #000;
+  font-size: 28px;
+} */

@@ -37,13 +37,18 @@
     <div class="padding">
     <div class="contact">
         <div class="form">
-            <h1>We Are Ready Let's Talk</h1><br>
-            <form action="">
-                <input type="text" name="Fname" value="" placeholder="Your Name" class="hello" required><br><br>
-                <input type="email" name="Email" value="" placeholder="Email Address" class="hello" required title="please enter a valid email~"><br><br>
-                <textarea name="Message" placeholder="Message" style="height: 100px; resize: none; padding: 10px;" class="hello" required></textarea><br><br>
-                <button onclick="Shahbaz()"><a href="">Send Message</a></button>
+            <form action="" id="contactForm">
+                <h1>We Are Ready Let's Talk</h1><br>
+                <input type="text" name="Fname" value="" placeholder="Your Name" id="name" class="hello"><span class="error-msg">Name is required</span><br>
+                <input type="email" name="Email" value="" placeholder="Email Address" id="email" class="hello"><span class="error-msg">Please enter a valid email address</span><br>
+                <textarea name="Message" placeholder="Message" style="height: 100px; resize: none; padding: 10px;" id="message" class="hello"></textarea><span class="error-msg">Message is required</span><br>
+                <button type="submit">Send Message</button>
             </form>
+        </div>
+        <div  id="successMessage" class="success-box">
+            <img src="contactimg\download real.png" alt="" width="40px">
+            <h2>Thank you</h2>
+            <p>Your form has been submitted successfully. We'll review yuor details and get back to you soon.</p>
         </div>
         <div class="info">
             <h1>Contact Info</h1><br>
@@ -64,11 +69,63 @@
         <p>123 Fifth Avenue, MH 897, Mumbai, India | Phone:<a href="tel:7926840162">7926840162</a>| Email:<a href="outdoor@gmail.com">outdoor@gmail.com</a></p><br><br><br>
         <p>Copyright © 2026 Outdoor Adventure</p>
     </div>
-    <script>
-        function Shahbaz(){
-            var a= document.getElementsByClassName("hello").value;
-            alert("Your response has been Submitted!");
-        }
-    </script>
+  <script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // stop submit until valid
+
+  let isValid = true;
+
+  // Reset errors
+  document.querySelectorAll(".hello").forEach(input => {
+    input.classList.remove("error");
+  });
+  document.querySelectorAll(".error-msg").forEach(msg => {
+    msg.classList.remove("show");
+  });
+
+  // NAME
+  const name = document.getElementById("name");
+  if (name.value.trim() === "") {
+    name.classList.add("error");
+    name.nextElementSibling.classList.add("show");
+    isValid = false;
+  }
+
+  // EMAIL
+  const email = document.getElementById("email");
+  if (email.value.trim() === "" || !email.checkValidity()) {
+    email.classList.add("error");
+    email.nextElementSibling.classList.add("show");
+    isValid = false;
+  }
+
+  // MESSAGE
+  const message = document.getElementById("message");
+  if (message.value.trim() === "") {
+    message.classList.add("error");
+    message.nextElementSibling.classList.add("show");
+    isValid = false;
+  }
+
+  // SUCCESS
+  if (isValid) {
+    alert("Form submitted successfully!");
+    // this.submit(); // enable later when backend exists
+  }
+});
+// document.getElementById("contactForm").addEventListener("submit", function(e) {
+//   e.preventDefault(); // stop page reload
+
+//   // OPTIONAL: validation here
+//   // if validation fails → return;
+
+//   // hide form
+//   this.style.display = "none";
+
+//   // show thank you message
+//   document.getElementById("successMessage").style.display = "block";
+// });
+</script>
+</body>
 </body>
 </html>
