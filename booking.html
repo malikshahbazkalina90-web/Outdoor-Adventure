@@ -38,32 +38,62 @@
         <h1>Get Some Exciting Pakages!</h1>
         <h5>Choose the best packages for your next adventure</h5>
     </div><br><br>
-    <div class="packages">
-        <div class="LP">
-            <img src="bookingimg\WhatsApp Image 2026-01-25 at 3.09.31 PM.jpeg" alt="" height="200px" width="285px">
-            <h2>Mountain Adventure</h2>
-            <p>5 days/ 4 Nights</p>
-            <p class="p">Explore beautiful mountains and camping.</p>
-            <h1>₹15,000</h1>
-            <button><a href="booking.html">Book Now</a></button>
-        </div>
-        <div class="LP">
-            <img src="bookingimg\WhatsApp Image 2026-01-25 at 3.09.31 PM (1).jpeg" alt="" height="200px" width="285px">
-            <h2>Beach Holiday</h2>
-            <p>4 days/ 3 Nights</p>
-            <p class="p">Relax on sunny beaches with luxury stay.</p>
-            <h1>₹12,000</h1>
-            <button><a href="booking.html">Book Now</a></button>
-        </div>
-        <div class="LP">
-            <img src="abouimg\WhatsApp Image 2026-01-25 at 6.04.25 PM.jpeg" alt="" height="200px" width="285px">
-            <h2>Mountain Adventure</h2>
-            <p>3 days/ 2 Nights</p>
-            <p class="p">Discover famous cities, culture and food.</p>
-            <h1>₹10,000</h1>
-            <button><a href="booking.html">Book Now</a></button>
-        </div>
-    </div><br>
+    <div class="main">
+  <div class="cards">
+    <div class="card">
+      <img src="bookingimg\WhatsApp Image 2026-01-25 at 3.09.31 PM.jpeg">
+      <div class="card-content">
+        <h3>Mountain Adventure</h3>
+        <p>5 Days / 4 Nights</p>
+        <p class="p">Explore beautiful mountains and camping.</p>
+        <p class="price">₹15,000</p>
+        <button class="book-btn" onclick="openBooking('Mountain Adventure', 15000)">
+          Book Now
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="bookingimg\WhatsApp Image 2026-01-25 at 3.09.31 PM (1).jpeg">
+      <div class="card-content">
+        <h3>Beach Holiday</h3>
+        <p>4 Days / 3 Nights</p>
+        <p class="p">Relax on sunny beaches with luxury stay.</p>
+        <p class="price">₹12,000</p>
+        <button class="book-btn" onclick="openBooking('Beach Holiday', 12000)">
+          Book Now
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="abouimg\WhatsApp Image 2026-01-25 at 6.04.25 PM.jpeg">
+      <div class="card-content">
+        <h3>City Tour</h3>
+        <p>3 Days / 2 Nights</p>
+        <p class="p">Discover famous cities, culture and food.</p>
+        <p class="price">₹10,000</p>
+        <button class="book-btn" onclick="openBooking('City Tour', 10000)">
+          Book Now
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="bookingPanel" class="booking">
+      <span id="closeBooking" class="close-btn">&times;</span>
+      <h2 style="text-align: center;">Complete Your Booking</h2>
+      <p id="pkgName"></p> 
+      <p id="pkgPrice"></p>
+      
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Email">
+      <input type="date">
+      
+      <button class="confirm-btn">Confirm Booking</button>
+    </div>
+</div>
+
+    
     <div class="rt">
         <h1>Discount & Offers</h1>
              <hr class="hr">
@@ -84,5 +114,17 @@
         <p>123 Fifth Avenue, MH 897, Mumbai, India | Phone:<a href="tel:7926840162">7926840162</a>| Email:<a href="outdoor@gmail.com">outdoor@gmail.com</a></p><br><br><br>
         <p>Copyright © 2026 Outdoor Adventure</p>
     </div>
+   <script>
+function openBooking(name, price) {
+  document.getElementById("pkgName").innerText = "Package: " + name;
+  document.getElementById("pkgPrice").innerText = "Price: ₹" + price;
+  const panel = document.getElementById("bookingPanel");
+  panel.classList.add("show");
+  panel.scrollIntoView({ behavior: "smooth" });
+}
+  document.getElementById("closeBooking").addEventListener("click", function() {
+  document.getElementById("bookingPanel").classList.remove("show");
+});
+</script>
 </body>
 </html>
