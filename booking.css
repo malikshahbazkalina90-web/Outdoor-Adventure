@@ -125,6 +125,10 @@ h1{
   display: none;
   position: relative;
 }
+.booking a{
+    text-decoration: none;
+    color: #ececec;
+}
 
 .booking.show {
   display: block;
