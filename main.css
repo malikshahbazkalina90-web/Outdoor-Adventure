@@ -1,15 +1,112 @@
 *{
     font-size: 20px;
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
     padding: 0;   
     font-family: 'Noto Sans', sans-serif; 
 }
-@media screen and(max-width:1134){
-    .background1{
+@media screen and (max-width: 768px) {
+
+    * {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .h2 h2 {
+        font-size: 26px;
+        padding: 20px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar .logo {
+        padding-left: 0;
+    }
+
+    .navbar .os ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .navbar .os ul button {
+        margin-top: 0;
+        width: 140px;
+        height: 45px;
+    }
+    .background1 {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .overlay {
+        height: 100%;
+    }
+
+    .background1 .hero {
+        margin-top: 20%;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    hr {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .outdiv {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .mimg {
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .s, .m {
         width: 100%;
-    }    
+    }
+
+    .s img, .m img {
+        width: 100%;
+    }
+
+    .content {
+        position: static;
+        padding: 20px;
+        height: auto;
+        color: white;
+        text-align: left;
+    }
+
+    .whitebox {
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .block1 {
+        width: 100%;
+    }
+
+    .blackbox {
+        padding: 40px 20px;
+        height: auto;
+    }
 }
+
 h1{
     margin: 0;
     font-size: 64px;

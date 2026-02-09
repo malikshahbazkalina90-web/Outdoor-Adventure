@@ -71,11 +71,10 @@
     </div>
   <script>
 document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault(); // stop submit until valid
+  e.preventDefault(); 
 
   let isValid = true;
 
-  // Reset errors
   document.querySelectorAll(".hello").forEach(input => {
     input.classList.remove("error");
   });
@@ -83,7 +82,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     msg.classList.remove("show");
   });
 
-  // NAME
+  
   const name = document.getElementById("name");
   if (name.value.trim() === "") {
     name.classList.add("error");
@@ -91,7 +90,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     isValid = false;
   }
 
-  // EMAIL
+  
   const email = document.getElementById("email");
   if (email.value.trim() === "" || !email.checkValidity()) {
     email.classList.add("error");
@@ -99,7 +98,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     isValid = false;
   }
 
-  // MESSAGE
+  
   const message = document.getElementById("message");
   if (message.value.trim() === "") {
     message.classList.add("error");
@@ -107,7 +106,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     isValid = false;
   }
 
-  // SUCCESS
+
   if (isValid) {
     alert("Form submitted successfully!");
     // this.submit(); // enable later when backend exists
@@ -119,10 +118,10 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 //   // OPTIONAL: validation here
 //   // if validation fails → return;
 
-//   // hide form
+
 //   this.style.display = "none";
 
-//   // show thank you message
+
 //   document.getElementById("successMessage").style.display = "block";
 // });
 </script>
