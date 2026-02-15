@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="img\favicon.png">
+    <title>Outdoor Adventure</title>
+    <style>
+        *{
+    font-size: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;   
+    font-family: 'Noto Sans', sans-serif; 
+}
+body{
+    background-color:#ececec;
+}
+.navbar .logo{
+    padding-left: 50px;
+    font-size: 20px;
+}
+.navbar .os ul a{
+    text-decoration: none;
+    color: rgb(247, 252, 252);
+    font-weight: 700;
+}
+.navbar .os ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 10px;
+}
+.navbar .os ul button{
+    background-color: #fb2056;
+    padding: 3px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    padding: 5px;
+    width: 150px;
+    height: 50px;
+    margin-top: -30px;
+}
+.background3{
+    background-image:url("bookingimg/WhatsApp Image 2026-01-25 at 3.09.32 PM.jpeg");
+    background-position: center;
+    height: 576px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+    /* z-index: 0; */
+}
+.overlay{
+     position: absolute; 
+  
+  width: 100%; 
+  height:  576px; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); 
+  z-index: 1;
+  inset: 0;
+}
+.navbar,.hero{
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+ul{
+    list-style: none;
+}
+.background3 .hero{
+    text-align: center;
+    padding: 120px;
+}
+.purple{
+    background-color: black;
+    padding: 50px;
+    padding-top: 60px;
+    text-align: center;
+    color: white;
+    line-height: 50px;
+}
+.purple h1{
+    font-size: 50px;
+}
+.purple h5{
+    font-size: 30px;
+}
+.main {
+  max-width: 1100px;
+  margin: 10px auto;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.card {
+  width: 252px;
+  /* text-align: center; */
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+h3{
+    padding-bottom: 3px;
+    font-size: 25px;
+}
+.p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 40px;
+  padding-bottom:10px ;
+}
+
+.book-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.book-btn:hover{
+    transform:scale(1.30)
+}
+.card button a{
+  text-decoration: none;
+  color: white;
+}
+.rt{
+    margin: 30px;
+}
+.hr{
+    text-align: left;
+    margin-left: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid red;
+    width: 50px;
+}
+h2,h1{
+    padding: 7px;
+}
+h1{
+    font-size: 40px;
+}
+.blackbox p a, .blackbox p{
+    text-decoration: none;
+    color: white;
+    font-size: 20px; 
+}
+.blackbox{
+    background-color: black;
+    padding: 8%;
+    text-align: center;
+    height: 20%;
+}
+    </style>
+</head>
+<body>
+    <div class="background3" >
+        <div class="overlay"></div>
+        <div class="navbar">
+            <div class="logo">
+                <img src="img\Outdoorbg.png" alt="">
+            </div>
+            <div class="os">
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li><button><a href="booking.html">Book Now</a></button></li>
+                </ul>
+            </div>
+        </div>
+            <div class="hero">
+            <!-- <h3>Explore the Colorful World</h3> -->
+        <!-- <hr> -->
+        <!-- <span> .</span> -->
+        <h1 style="font-size: 64px;">City Tour</h1>
+        <!-- <button><a href="">Learn More</a></button> -->
+        </div> 
+    </div>
+    <div class="purple">
+        <h1>Get Exciting Pakages On City Tour!</h1>
+        <h5>Choose the best packages for your next adventure</h5>
+    </div><br>
+    <div class="main">
+  <div class="cards">
+    <div class="card">
+      <img src="3div/Mumbai.jpg">
+      <div class="card-content">
+        <h3>Mumbai Tour</h3>
+        <p>3 Days / 2 Nights</p>
+        <p class="p">The vibrant financial and film capital of India.</p>
+        <p class="price">₹7,500</p>
+        <button class="book-btn" onclick="openBooking('Mountain Adventure', 15000)">
+         <a href="Mumbai.html">Book Now</a>
+        </button>
+      </div>
+      </div>
+    <!-- </div> -->
+    <!-- <div class="cards"> -->
+    <div class="card">
+      <img src="3div/delhi.jfif">
+      <div class="card-content">
+        <h3>Delhi Tour</h3>
+        <p>3 Days / 2 Nights</p>
+        <p class="p">A city rich in history and iconic monuments.</p>
+        <p class="price">₹5,000</p>
+        <button class="book-btn" onclick="openBooking('Mountain Adventure', 15000)">
+         <a href="delhi.html">Book Now</a>
+        </button>
+      </div>
+    </div>
+    <!-- <div class="cards"> -->
+    <div class="card">
+      <img src="3div/Jaipur.jfif">
+      <div class="card-content">
+        <h3>Jaipur Tour</h3>
+        <p>3 Days / 2 Nights</p>
+        <p class="p">Famous for its pink palaces and hospitality.</p>
+        <p class="price">₹7,000</p>
+        <button class="book-btn" onclick="openBooking('Mountain Adventure', 15000)">
+         <a href="jaipur.html">Book Now</a>
+        </button>
+      </div>
+    </div>
+  <!-- </div> -->
+    <!-- <div class="cards"> -->
+    <div class="card">
+      <img src="3div/Agra.jfif">
+      <div class="card-content">
+        <h3>Agra Tour</h3>
+        <p>3 Days / 2 Nights</p>
+        <p class="p">Home to the magnificent Taj Mahal.</p>
+        <p class="price">₹9,000</p>
+        <button class="book-btn" onclick="openBooking('Mountain Adventure', 15000)">
+         <a href="Agra.html">Book Now</a>
+        </button>
+      </div>
+    </div>
+   <!-- <div class="cards"> -->
+    <div class="card">
+      <img src="3div/Chennai.jpg">
+      <div class="card-content">
+        <h3>Chennai Tour</h3>
+        <p>3 Days / 2 Nights</p>
+        <p class="p">Known for culture, temples and hospitality.</p>
+        <p class="price">₹7,000</p>
+        <button class="book-btn" onclick="openBooking('Mountain Adventure', 15000)">
+         <a href="chennai.html">Book Now</a>
+        </button>
+      </div>
+    </div> 
+   <!-- <div class="cards"> -->
+    <div class="card">
+      <img src="3div/Kolkata.jpg">
+      <div class="card-content">
+        <h3>Kolkata Tour</h3>
+        <p>3 Days / 2 Nights</p>
+        <p class="p">Celebrated for art, culture and heritage.</p>
+        <p class="price">₹8,000</p>
+        <button class="book-btn" onclick="openBooking('Mountain Adventure', 15000)">
+         <a href="kolkata.html">Book Now</a>
+        </button>
+      </div>
+    </div>
+    <!-- <div class="cards"> -->
+    <div class="card">
+      <img src="3div/banglore.jpg">
+      <div class="card-content">
+        <h3>Banglore Tour</h3>
+        <p>3 Days / 2 Nights</p>
+        <p class="p">India’s leading IT and tech hub with Beauty</p>
+        <p class="price">₹6,999</p>
+        <button class="book-btn" onclick="openBooking('Mountain Adventure', 15000)">
+         <a href="banglore.html">Book Now</a>
+        </button>
+      </div>
+    </div>
+    <!-- <div class="cards"> -->
+    <div class="card">
+      <img src="3div/hyderabad.jpg">
+      <div class="card-content">
+        <h3>Hyderabad Tour</h3>
+        <p>3 Days / 2 Nights</p>
+        <p class="p">Famous for Charminar and rich cuisine.</p>
+        <p class="price">₹5,000</p>
+        <button class="book-btn" onclick="openBooking('Mountain Adventure', 15000)">
+         <a href="hyderabad.html">Book Now</a>
+        </button>
+      </div> 
+      </div>
+  </div>
+    </div><br>
+    <div class="rt">
+        <h1>City Tour</h1>
+             <hr class="hr">
+             <p>Our City Tour experiences are crafted to showcase the rich culture, history, and modern life of India’s most iconic cities. Explore heritage monuments, bustling markets, and famous landmarks in destinations like Delhi, Mumbai, Jaipur, Agra, Chennai, Kolkata, and Bengaluru. From royal palaces and historic forts to vibrant streets, local food, and cultural experiences, each city offers a unique story to discover. These city tours are ideal for travelers who want a perfect blend of sightseeing, culture, and urban adventure as part of their Outdoor Adventure journey.Our City Tour Packages are designed for travelers who want to explore the culture, history, and highlights of major Indian cities in a comfortable and well-planned way. These packages are ideal for short trips, first-time visitors, and anyone looking for a balanced mix of learning, exploration, and relaxation.</p><br>
+    </div>
+     <div class="blackbox">
+        <p>123 Fifth Avenue, MH 897, Mumbai, India | Phone:<a href="tel:7926840162">7926840162</a>| Email:<a href="outdoor@gmail.com">outdoor@gmail.com</a></p><br><br><br>
+        <p>Copyright © 2026 Outdoor Adventure</p>
+    </div>
+</body>
+</html>

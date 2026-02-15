@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="img\favicon.png">
+    <title>Outdoor Adventure</title>
+    <style>
+        *{
+    font-size: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;   
+    font-family: 'Noto Sans', sans-serif; 
+}
+body{
+    background-color:#ececec;
+}
+.navbar .logo{
+    padding-left: 50px;
+    font-size: 20px;
+}
+.navbar .os ul a{
+    text-decoration: none;
+    color: rgb(247, 252, 252);
+    font-weight: 700;
+}
+.navbar .os ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 10px;
+}
+.navbar .os ul button{
+    background-color: #fb2056;
+    padding: 3px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    padding: 5px;
+    width: 150px;
+    height: 50px;
+    margin-top: -30px;
+}
+.background3{
+    background-image:url("bookingimg/WhatsApp Image 2026-01-25 at 3.09.31 PM (1).jpeg");
+    background-position: center;
+    height: 576px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+    /* z-index: 0; */
+}
+.overlay{
+     position: absolute; 
+  
+  width: 100%; 
+  height:  576px; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); 
+  z-index: 1;
+  inset: 0;
+}
+.navbar,.hero{
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+ul{
+    list-style: none;
+}
+.background3 .hero{
+    text-align: center;
+    padding: 120px;
+}
+.purple{
+    background-color: black;
+    padding: 50px;
+    padding-top: 60px;
+    text-align: center;
+    color: white;
+    line-height: 50px;
+}
+.purple h1{
+    font-size: 50px;
+}
+.purple h5{
+    font-size: 30px;
+}
+.main {
+  max-width: 1100px;
+  margin: 10px auto;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.card {
+  width: 252px;
+  /* text-align: center; */
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+h3{
+    padding-bottom: 3px;
+    font-size: 25px;
+}
+.p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 40px;
+  padding-bottom:10px ;
+}
+
+.book-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.book-btn:hover{
+    transform:scale(1.30)
+}
+.card button a{
+  text-decoration: none;
+  color: white;
+}
+.rt{
+    margin: 30px;
+}
+.hr{
+    text-align: left;
+    margin-left: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid red;
+    width: 50px;
+}
+h2,h1{
+    padding: 7px;
+}
+h1{
+    font-size: 40px;
+}
+.blackbox p a, .blackbox p{
+    text-decoration: none;
+    color: white;
+    font-size: 20px; 
+}
+.blackbox{
+    background-color: black;
+    padding: 8%;
+    text-align: center;
+    height: 20%;
+}
+    </style>
+</head>
+<body>
+    <div class="background3" >
+        <div class="overlay"></div>
+        <div class="navbar">
+            <div class="logo">
+                <img src="img\Outdoorbg.png" alt="">
+            </div>
+            <div class="os">
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li><button><a href="booking.html">Book Now</a></button></li>
+                </ul>
+            </div>
+        </div>
+            <div class="hero">
+            <!-- <h3>Explore the Colorful World</h3> -->
+        <!-- <hr> -->
+        <!-- <span> .</span> -->
+        <h1 style="font-size: 64px;">Beach Holiday</h1>
+        <!-- <button><a href="">Learn More</a></button> -->
+        </div> 
+    </div>
+    <div class="purple">
+        <h1>Get Exciting Pakages On Beach Holiday!</h1>
+        <h5>Choose the best packages for your next adventure</h5>
+    </div><br>
+    <div class="main">
+  <div class="cards">
+    <div class="card">
+      <img src="3div/goa beach.jpg">
+      <div class="card-content">
+        <h3>Goa Beach</h3>
+        <p>4 Days / 3 Nights</p>
+        <p class="p">Famous for water sports and nightlife.</p>
+        <p class="price">₹10,000</p>
+        <button class="book-btn" onclick="openBooking('Mountain Adventure', 15000)">
+         <a href="goa.html">Book Now</a>
+        </button>
+      </div>
+      </div>
+    <!-- </div> -->
+    <!-- <div class="cards"> -->
+    <div class="card">
+      <img src="3div/radhanagar beach.jfif">
+      <div class="card-content">
+        <h3>Havelock Island</h3>
+        <p>4 Days / 3 Nights</p>
+        <p class="p">Known for white sand and clear water.</p>
+        <p class="price">₹17,000</p>
+        <button class="book-btn" onclick="openBooking('Mountain Adventure', 15000)">
+         <a href="havelock.html">Book Now</a>
+        </button>
+      </div>
+    </div>
+    <!-- <div class="cards"> -->
+    <div class="card">
+      <img src="3div/Kovalam beach.jpg">
+      <div class="card-content">
+        <h3>Kovalam Beach</h3>
+        <p>4 Days / 3 Nights</p>
+        <p class="p">Popular for surfing and lighthouse views.</p>
+        <p class="price">₹12,000</p>
+        <button class="book-btn" onclick="openBooking('Mountain Adventure', 15000)">
+         <a href="kovalam.html">Book Now</a>
+        </button>
+      </div>
+    </div>
+    <!-- <div class="cards"> -->
+    <div class="card">
+      <img src="3div/Varkala beach.jpg">
+      <div class="card-content">
+        <h3>Varkala Beach</h3>
+        <p>4 Days / 3 Nights</p>
+        <p class="p">Famous for scenic sea cliffs.</p>
+        <p class="price">₹12,000</p>
+        <button class="book-btn" onclick="openBooking('Mountain Adventure', 15000)">
+         <a href="varkala.html">Book Now</a>
+        </button>
+      </div>
+    </div>
+  <!-- </div> -->
+   <!-- <div class="cards"> -->
+    <div class="card">
+      <img src="3div/mariana beach.jpg">
+      <div class="card-content">
+        <h3>Mariana Beach</h3>
+        <p>4 Days / 3 Nights</p>
+        <p class="p">One of the longest urban beaches in the world.</p>
+        <p class="price">₹7,000</p>
+        <button class="book-btn" onclick="openBooking('Mountain Adventure', 15000)">
+         <a href="mariana.html">Book Now</a>
+        </button>
+      </div>
+    </div> 
+   <!-- <div class="cards"> -->
+    <div class="card">
+      <img src="3div/Tarkarli beach.png">
+      <div class="card-content">
+        <h3>Tarkali Beach</h3>
+        <p>4 Days / 3 Nights</p>
+        <p class="p">Best for scuba diving and various views.</p>
+        <p class="price">₹8,000</p>
+        <button class="book-btn" onclick="openBooking('Mountain Adventure', 15000)">
+         <a href="Tarakali.html">Book Now</a>
+        </button>
+      </div>
+    </div>
+    <!-- <div class="cards"> -->
+    <div class="card">
+      <img src="3div/Palolem Beach.jpg">
+      <div class="card-content">
+        <h3>Palolem Beach</h3>
+        <p>4 Days / 3 Nights</p>
+        <p class="p">Calm and perfect for kayaking.</p>
+        <p class="price">₹12,000</p>
+        <button class="book-btn" onclick="openBooking('Mountain Adventure', 15000)">
+         <a href="palolem.html">Book Now</a>
+        </button>
+      </div>
+    </div>
+    <!-- <div class="cards"> -->
+    <div class="card">
+      <img src="3div/dhanushkodi beach.webp">
+      <div class="card-content">
+        <h3>Arichal Munai</h3>
+        <p>4 Days / 3 Nights</p>
+        <p class="p">Peaceful beach with beautiful sunrise views.</p>
+        <p class="price">₹15,000</p>
+        <button class="book-btn" onclick="openBooking('Mountain Adventure', 15000)">
+         <a href="Arichal.html">Book Now</a>
+        </button>
+      </div> 
+      </div>
+  </div>
+    </div><br>
+    <div class="rt">
+        <h1>Beach Holiday</h1>
+             <hr class="hr">
+             <p>Our Beach Holiday experiences are designed for travelers who want to explore the diverse beauty of India’s coastline while enjoying both adventure and relaxation. Destinations such as Goa Beach and Palolem Beach offer a lively coastal vibe with water sports, beach activities, and vibrant surroundings, while Radhanagar Beach is perfect for those seeking untouched beauty, clear waters, and peaceful island experiences.
+
+For a mix of culture and scenic charm, Kovalam Beach and Marina Beach provide long shorelines ideal for relaxing walks, local flavors, and beautiful sea views. Adventure lovers can enjoy snorkeling and scuba diving at Tarkarli Beach, known for its clear waters and marine life, while Dhanushkodi Beach offers a unique and serene setting with dramatic landscapes and breathtaking sunrises.</p><br>
+    </div>
+     <div class="blackbox">
+        <p>123 Fifth Avenue, MH 897, Mumbai, India | Phone:<a href="tel:7926840162">7926840162</a>| Email:<a href="outdoor@gmail.com">outdoor@gmail.com</a></p><br><br><br>
+        <p>Copyright © 2026 Outdoor Adventure</p>
+    </div>
+</body>
+</html>

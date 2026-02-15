@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+<title>Outdoor Adventure</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+body{ background:#f2f4f7; }
+
+.booking-page{
+    max-width:1100px;
+    margin:40px auto;
+    background:#fff;
+    display:flex;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.left{ width:50%; }
+.left img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.right{ width:50%; padding:40px; }
+
+.right h1{ font-size:28px; margin-bottom:5px; }
+
+.price{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:25px;
+}
+.price span{
+    color:#e65c00;
+    font-size:26px;
+}
+
+.form-group{ margin-bottom:18px; }
+
+.form-group label{
+    display:block;
+    margin-bottom:6px;
+    font-size:14px;
+    font-weight:500;
+}
+
+.form-group input,
+.form-group select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:14px;
+}
+
+.error{
+    color:red;
+    font-size:12px;
+    margin-top:4px;
+}
+
+.row{
+    display:flex;
+    gap:15px;
+}
+.row .form-group{ flex:1; }
+
+.book-btn{
+    width:100%;
+    padding:14px;
+    margin-top:10px;
+    background:linear-gradient(to right,#ff7a00,#fb2056);
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:600;
+    color:white;
+    cursor:pointer;
+}
+
+.book-btn:disabled{
+    background:#ccc;
+    cursor:not-allowed;
+}
+</style>
+</head>
+
+<body>
+
+<div class="booking-page">
+
+<div class="left">
+    <img src="3div/radhanagar beach.jfif" alt="Ladakh">
+</div>
+
+<div class="right">
+
+<h1>Havelock Island</h1>
+
+<div class="price">
+    Total Price: <span>₹17,000</span>
+</div>
+
+<form id="bookingForm">
+
+<div class="form-group">
+    <label>Full Name*</label>
+    <input type="text" id="name" placeholder="Enter your name">
+    <span class="error" id="nameError"></span>
+</div>
+
+<div class="row">
+
+<div class="form-group">
+    <label>Phone Number*</label>
+    <input type="text" id="phone" placeholder="Enter your phone number">
+    <span class="error" id="phoneError"></span>
+</div>
+
+<div class="form-group">
+    <label>Email Address*</label>
+    <input type="text" id="email" placeholder="Enter your email">
+    <span class="error" id="emailError"></span>
+</div>
+
+</div>
+
+<div class="form-group">
+    <label>Trip Date*</label>
+    <input type="date" id="travelDate">
+    <span class="error" id="dateError"></span>
+</div>
+
+<div class="form-group">
+    <label>Guests*</label>
+    <select id="guests">
+        <option value="">Select guests</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+</div>
+
+<button type="submit" class="book-btn" id="bookBtn" disabled>
+    Book Now
+</button>
+
+</form>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+
+emailjs.init("oGcB8ELvhRR58Jp3t");
+
+// Trip Info
+const TRIP_NAME = "Havelock Island Trip";
+const PACKAGE_TYPE = "Beach Holiday";
+const TRIP_DETAILS = "4 Days Havelock Island Trip with hotel, sightseeing, and breakfast.";
+const PRICE_PER_PERSON = 17000;
+
+const nameInput = document.getElementById("name");
+const phoneInput = document.getElementById("phone");
+const emailInput = document.getElementById("email");
+const guestsInput = document.getElementById("guests");
+const bookBtn = document.getElementById("bookBtn");
+const travelDateInput = document.getElementById("travelDate");
+const dateError = document.getElementById("dateError");
+
+const today = new Date().toISOString().split("T")[0];
+travelDateInput.setAttribute("min", today);
+
+function validateForm(){
+let valid = true;
+
+if(nameInput.value.trim() === ""){
+    document.getElementById("nameError").innerText = "Enter your name";
+    valid = false;
+}else{
+    document.getElementById("nameError").innerText = "";
+}
+
+const phonePattern = /^[0-9]{10}$/;
+if(!phonePattern.test(phoneInput.value)){
+    document.getElementById("phoneError").innerText = "Enter valid 10-digit phone number";
+    valid = false;
+}else{
+    document.getElementById("phoneError").innerText = "";
+}
+
+const emailValue = emailInput.value.trim().toLowerCase();
+const emailPattern = /^[a-z0-9._%+-]+@gmail\.com$/;
+
+if(!emailPattern.test(emailValue)){
+    document.getElementById("emailError").innerText = "Email must end with @gmail.com";
+    valid = false;
+}else{
+    document.getElementById("emailError").innerText = "";
+}
+
+if(travelDateInput.value === ""){
+    dateError.innerText = "Please select a travel date";
+    valid = false;
+}else{
+    dateError.innerText = "";
+}
+
+if(guestsInput.value === ""){
+    valid = false;
+}
+
+bookBtn.disabled = !valid;
+}
+
+nameInput.addEventListener("input", validateForm);
+phoneInput.addEventListener("input", validateForm);
+emailInput.addEventListener("input", validateForm);
+guestsInput.addEventListener("change", validateForm);
+travelDateInput.addEventListener("change", validateForm);
+
+validateForm();
+
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    if(bookBtn.disabled) return;
+
+    const guests = guestsInput.value;
+    const totalPrice = guests * PRICE_PER_PERSON;
+
+    emailjs.send("service_tslkqzc", "template_wdni1rs", {
+        trip_name: TRIP_NAME,
+        package_type: PACKAGE_TYPE,
+        trip_details: TRIP_DETAILS,
+        customer_name: nameInput.value,
+        customer_email: emailInput.value,
+        customer_phone: phoneInput.value,
+        travel_date: travelDateInput.value,
+        guests: guests,
+        total_price: totalPrice
+    });
+
+    emailjs.send("service_tslkqzc", "template_9ue3x7k", {
+        to_name: nameInput.value,
+        to_email: emailInput.value,
+        trip_name: TRIP_NAME,
+        package_type: PACKAGE_TYPE,
+        trip_details: TRIP_DETAILS,
+        travel_date: travelDateInput.value,
+        guests: guests,
+        total_price: totalPrice
+    });
+
+    alert("Booking successful! Confirmation email sent.");
+});
+
+</script>
+
+</body>
+</html>

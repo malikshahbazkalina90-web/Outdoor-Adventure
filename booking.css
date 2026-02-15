@@ -274,3 +274,7 @@ h3{
 .close-btn:hover {
   color: red;
 }
+.card button a{
+  text-decoration: none;
+  color: white;
+}
